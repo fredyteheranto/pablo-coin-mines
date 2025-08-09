@@ -1,6 +1,7 @@
-import { ConnectWallet } from "@thirdweb-dev/react";
-import { useToggleSidebarMenuContext } from "context/toggleSidebarMenu";
 import React from "react";
+import { useToggleSidebarMenuContext } from "context/toggleSidebarMenu";
+
+import { ConnectWallet } from "@thirdweb-dev/react";
 
 export default function Header() {
   const [showModal, setShowModal] = React.useState(false);
@@ -11,7 +12,7 @@ export default function Header() {
         <div className="flex items-center  justify-between  p-2">
           <div className="flex items-center space-x-3 z-9">
             <span className="p-2 text-xl font-semibold leading-8 tracking-wider uppercase whitespace-nowrap lg:hidden">
-              CMK
+              PM
             </span>
             <button className="p-2 rounded-md focus:outline-none focus:ring" onClick={handleOpenMenu}>
               <svg
