@@ -1,0 +1,269 @@
+[
+  { "inputs": [], "stateMutability": "nonpayable", "type": "constructor" },
+  {
+    "inputs": [],
+    "name": "TOKEN",
+    "outputs": [{ "internalType": "contract IERC20", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "_address", "type": "address" }],
+    "name": "addUserBanned",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "daysLeft", "type": "uint256" }],
+    "name": "calculateTaxFeePercentage",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "cmkGame",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "cmkToken",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "gameCMK",
+    "outputs": [{ "internalType": "contract GameCMK", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "lastPlayedTime", "type": "uint256" }],
+    "name": "getDaysLeft",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "teamId", "type": "uint256" },
+      { "internalType": "uint256", "name": "index", "type": "uint256" }
+    ],
+    "name": "getFeeInfo",
+    "outputs": [
+      { "internalType": "uint256", "name": "daysLeft", "type": "uint256" },
+      { "internalType": "uint256", "name": "feePercentage", "type": "uint256" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "user", "type": "address" }],
+    "name": "getLastExecutionTime",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "daysLeft", "type": "uint256" }],
+    "name": "getTaxFee",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getTokenValue",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getTotalEarnings",
+    "outputs": [{ "internalType": "uint256", "name": "totalEarnings", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getTotalEarningsWin",
+    "outputs": [{ "internalType": "uint256", "name": "totalEarnings", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "user", "type": "address" },
+      { "internalType": "uint256", "name": "tokenId", "type": "uint256" }
+    ],
+    "name": "getUserWinInfo",
+    "outputs": [
+      {
+        "components": [
+          { "internalType": "uint256", "name": "teamId", "type": "uint256" },
+          { "internalType": "uint256", "name": "wins", "type": "uint256" },
+          { "internalType": "uint256", "name": "losses", "type": "uint256" },
+          { "internalType": "uint256", "name": "earning", "type": "uint256" },
+          { "internalType": "uint256", "name": "lastPlayedTime", "type": "uint256" },
+          { "internalType": "address", "name": "player", "type": "address" },
+          { "internalType": "bool", "name": "pay", "type": "bool" }
+        ],
+        "internalType": "struct GameCMK.WinInfo[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "walletAddress", "type": "address" }],
+    "name": "getWalletWinInfoNFTs",
+    "outputs": [
+      {
+        "components": [
+          { "internalType": "uint256", "name": "teamId", "type": "uint256" },
+          { "internalType": "uint256", "name": "idPay", "type": "uint256" },
+          { "internalType": "uint256", "name": "wins", "type": "uint256" },
+          { "internalType": "uint256", "name": "losses", "type": "uint256" },
+          { "internalType": "uint256", "name": "earning", "type": "uint256" },
+          { "internalType": "uint256", "name": "lastPlayedTime", "type": "uint256" },
+          { "internalType": "uint256", "name": "lastPlayedTimeGame", "type": "uint256" },
+          { "internalType": "address", "name": "player", "type": "address" },
+          { "internalType": "uint256", "name": "percentajePay", "type": "uint256" },
+          { "internalType": "uint256", "name": "brutearning", "type": "uint256" },
+          { "internalType": "uint256", "name": "earningCMK", "type": "uint256" },
+          { "internalType": "bool", "name": "pay", "type": "bool" }
+        ],
+        "internalType": "struct WithdrawContract.WithdrawalInfo[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "name": "lastExecutionTime",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "uint256", "name": "", "type": "uint256" }
+    ],
+    "name": "lastWinInfo",
+    "outputs": [
+      { "internalType": "uint256", "name": "teamId", "type": "uint256" },
+      { "internalType": "uint256", "name": "idPay", "type": "uint256" },
+      { "internalType": "uint256", "name": "wins", "type": "uint256" },
+      { "internalType": "uint256", "name": "losses", "type": "uint256" },
+      { "internalType": "uint256", "name": "earning", "type": "uint256" },
+      { "internalType": "uint256", "name": "lastPlayedTime", "type": "uint256" },
+      { "internalType": "uint256", "name": "lastPlayedTimeGame", "type": "uint256" },
+      { "internalType": "address", "name": "player", "type": "address" },
+      { "internalType": "uint256", "name": "percentajePay", "type": "uint256" },
+      { "internalType": "uint256", "name": "brutearning", "type": "uint256" },
+      { "internalType": "uint256", "name": "earningCMK", "type": "uint256" },
+      { "internalType": "bool", "name": "pay", "type": "bool" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "nftContract",
+    "outputs": [{ "internalType": "contract CmknftCharacters", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "nftContractAddress",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "oracleCMK",
+    "outputs": [{ "internalType": "contract OracleCMKToGame", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "oracleCMKToGameAddress",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "name": "payments",
+    "outputs": [
+      { "internalType": "address", "name": "recipient", "type": "address" },
+      { "internalType": "uint256", "name": "deposit", "type": "uint256" },
+      { "internalType": "uint256", "name": "percentajePay", "type": "uint256" },
+      { "internalType": "uint256", "name": "earning", "type": "uint256" },
+      { "internalType": "uint256", "name": "timestamp", "type": "uint256" },
+      { "internalType": "uint256", "name": "brutearning", "type": "uint256" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "_address", "type": "address" }],
+    "name": "removeUserBanned",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "totalDays",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "idPay", "type": "uint256" }],
+    "name": "verifyIsPayment",
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "name": "whitelist",
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "teamId", "type": "uint256" },
+      { "internalType": "uint256", "name": "index", "type": "uint256" }
+    ],
+    "name": "withdraw",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  }
+]

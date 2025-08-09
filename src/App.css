@@ -1,0 +1,451 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(135deg, var(--dark), #222);
+  font-family: 'Bangers', cursive;
+
+}
+
+.logok {
+
+
+  margin: 0;
+  color: #ffcc00;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 0 #ff6600, 6px 6px 0 rgba(0, 0, 0, 0.3);
+  transform: rotate(-2deg);
+  animation: pulse 2s infinite alternate;
+
+}
+
+.sidebar-bg {
+
+  background: rgba(0, 0, 0, 0.3);
+  border-right: 3px solid #ffcc00;
+}
+
+.btn-custom-class {
+  width: 100% !important;
+}
+
+.ret {
+  background: green !important;
+  color: #fff !important;
+}
+
+.burn {
+  background: green !important;
+  color: #fff !important;
+}
+
+.reinv {
+  background: #ff6600 !important;
+  color: #fff !important;
+}
+
+
+.bgGradint {
+  background-image: linear-gradient(180deg, #ffcc00 0, #ff6600 100%);
+  color: #000;
+  z-index: 8;
+}
+
+.lock {
+  background: red;
+  height: 60px;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+
+.ramdos {
+  -webkit-animation: randomGen 2s steps(30) infinite;
+  animation: randomGen 2s steps(30) infinite;
+}
+
+@-webkit-keyframes randomGen {
+  100% {
+    transform: translateX(-3000%);
+  }
+}
+
+@keyframes randomGen {
+  100% {
+    transform: translateX(-3000%);
+  }
+}
+
+.slider {
+  position: relative;
+  background: url("../src/assets/images/desktop-1920x1080.png");
+  background-position: cover;
+  display: flex;
+  align-items: center;
+  height: 500px;
+  padding-top: 80px;
+  margin-bottom: 2.5rem;
+  justify-content: center;
+  font-size: 60px;
+  font-weight: bold;
+  color: #000;
+
+}
+
+.selecsa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.center-logo {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 230px;
+  height: 296px;
+  border-radius: 14px;
+  z-index: 1111;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  ;
+}
+
+.bg {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 220px;
+  height: 285px;
+  z-index: 2;
+  backdrop-filter: blur(24px);
+  border-radius: 10px;
+  overflow: hidden;
+
+}
+
+.blob {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ffcc00;
+  opacity: 1;
+  filter: blur(12px);
+  animation: blob-bounce 5s infinite ease;
+}
+
+.rarity-id {
+  position: absolute;
+  color: #fff;
+  top: 21px;
+  right: 13px;
+  font-weight: bold;
+  font-size: 20px;
+  background: #1a1095;
+  border-radius: 13px;
+  padding: 4px;
+}
+
+.center-div {
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.rarity {
+  position: absolute;
+  color: #000;
+  bottom: 28px;
+  left: 12px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@keyframes blob-bounce {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+  }
+
+  50% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+  }
+
+  75% {
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+  }
+
+  100% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+}
+
+.box-rm {
+  --border-size: 3px;
+  --border-angle: 0turn;
+  width: 60vmin;
+  height: 50vmin;
+  background-image: conic-gradient(from var(--border-angle),
+      #213,
+      #112 50%,
+      #213),
+    conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+  background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)),
+    cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  animation: bg-spin 3s linear infinite;
+
+  @keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
+    }
+  }
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+.check-header h1 {
+  display: block;
+  transform: skew(15deg);
+
+  text-transform: uppercase;
+  font-weight: 600;
+  text-shadow: 2px 2px 2px #000;
+  font-style: italic;
+  padding: 0.4em 0 0.7em;
+}
+
+.check-header::before {
+  top: 0;
+  height: 100%;
+  background: linear-gradient(to bottom, #717073 0, #717073 56%, #0b0a0b 100%);
+  opacity: .41;
+  border-radius: 6px;
+}
+
+.check-header::before {
+  top: 0;
+  height: 100%;
+  background: linear-gradient(to bottom, #717073 0, #717073 56%, #0b0a0b 100%);
+  opacity: .41;
+  border-radius: 6px;
+}
+
+.check-header {
+  position: relative;
+  display: block;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  border: 2px solid #ffcc00;
+  transform: skew(-15deg);
+  margin-bottom: 30px;
+
+}
+
+.bg-primary-pe {
+  background: linear-gradient(145deg, #222, #333);
+  padding: 25px;
+  border-radius: 15px;
+  border-top: 5px solid #ffcc00;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  flex: 1 1 300px;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.bg-primary-pe-selct {
+  flex: 1 1 150px;
+  max-width: 100%;
+  cursor: pointer;
+  background: linear-gradient(145deg, #222, #333);
+  padding: 25px;
+  border-radius: 15px;
+  border-top: 5px solid #ffcc00;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+h4 {
+
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: calc(100% - 55px);
+  padding: 6px 0;
+  color: #ffcc00;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  border-bottom: 1px solid #ff6600;
+  background-repeat: repeat-x;
+  background-size: 1px 100%;
+  transform: translateY(-50%);
+}
+
+
+
+.bgGradint::before {
+  background-image: #ffcc00;
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  opacity: .5;
+  height: 71px;
+}
+
+.bg-card {
+  background: linear-gradient(145deg, #222, #333);
+  border: 2px solid #ffcc00;
+
+  background-repeat: no-repeat;
+  color: #fff;
+
+}
+
+.text-3xl {
+  background-image: -webkit-linear-gradient(bottom, #000, #555);
+  background-image: -moz-linear-gradient(bottom, #000, #555);
+  background-image: -ms-linear-gradient(bottom, #000, #555);
+  background-image: -o-linear-gradient(bottom, #000, #555);
+  background-image: linear-gradient(to top, #000, #555);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.tw-connect-wallet,
+.tracking-wider {
+  z-index: 999;
+}
+
+.tg-sidebar {
+  -webkit-transform: unset;
+  -moz-transform: unset;
+  -ms-transform: unset;
+  -o-transform: unset;
+  transform: unset;
+  -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  background: #0d1013;
+}
+
+
+.card-game {
+  position: relative;
+  width: 140px;
+  height: 180px;
+  border-radius: 14px;
+  z-index: 1111;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  ;
+}
+
+
+.cente-img {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.bg-game {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 130px;
+  height: 185px;
+  z-index: 2;
+  backdrop-filter: blur(24px);
+  border-radius: 10px;
+  overflow: hidden;
+
+}
+
+.blob-game {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 135px;
+  height: 190;
+  border-radius: 50%;
+  background-color: #ff0000;
+  opacity: 1;
+  filter: blur(12px);
+  animation: blob-bounce 5s infinite ease;
+}
+
+.rarity-id-game {
+  position: absolute;
+  color: #fff;
+  top: 21px;
+  right: 13px;
+  font-weight: bold;
+  font-size: 14px;
+  background: #1a1095;
+  border-radius: 13px;
+  padding: 4px;
+}
+
+.center-div {
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.rarity-game {
+  position: absolute;
+  color: #000;
+  bottom: 32px;
+  left: 12px;
+  font-weight: bold;
+  font-size: 12px;
+}
